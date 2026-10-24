@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import Header from './components/header';
 import Main from './pages/main';
 import Cart from './pages/cart';
+import ProductPage from './pages/productPage';
 
 function App() {
   const handleAddProduct = (product) => {
@@ -14,6 +15,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Main />} />
+        <Route path="/product/:id" element={<ProductPage />} />
       </Routes>
     </div>
   );
